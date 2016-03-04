@@ -40,13 +40,13 @@
                     <div class="facts">
                         <!--login1-->
                         <div class="register">
-                            <form>	
-                                <input placeholder="Name" type="text" rsequired="">
-                                <input placeholder="Email Address" type="text" required="">									
-                                <input placeholder="Password" type="password" required="">	
-                                <input placeholder="Confirm Password" type="password" required="">
+                            <form method="post" action="index.php">	
+                                <input placeholder="Name" type="text" name="reg_name" rsequired="">
+                                <input placeholder="Email Address" name="reg_email"  type="text" required="">									
+                                <input placeholder="Password"  name="reg_pass" type="password" required="">	
+                                <input placeholder="Confirm Password" name="reg_repass"  type="password" required="">
                                 <div class="sign-up">
-                                    <input type="submit" value="Create Account"/>
+                                    <input type="submit"  name="reg" value="Create Account"/>
                                 </div>
                             </form>
                         </div>
