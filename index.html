@@ -56,11 +56,11 @@
                 <div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
                     <div class="facts">
                         <div class="register">
-                            <form>										
-                                <input placeholder="Email Address" class="mail" type="text" required="">									
-                                <input placeholder="Password" class="lock" type="password" required="">										
+                            <form method="post" action="index1.php">										
+                                <input placeholder="Email Address"  name="login_email" class="mail" type="text" required="">									
+                                <input placeholder="Password" class="lock" name="login_passwd" type="password" required="">										
                                 <div class="sign-up">
-                                    <input type="submit" value="Sign in"/>
+                                    <input type="submit" name="login" value="Sign in"/>
                                 </div>
                             </form>
                             <h3><a href="#"> Forgot Password</a></h3>

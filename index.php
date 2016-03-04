@@ -21,8 +21,5 @@ if (isset($_POST['reg'])&&isset($_POST['reg_name'])&&isset($_POST['reg_email'])&
         echo "l2ha ";
     }
 
-
-
- 
 }
 ?>
