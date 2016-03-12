@@ -1,4 +1,9 @@
 <?php
+session_start();
+   if(isset($_GET['logout'])) {
+        session_destroy();
+    }
+   if(!isset($_SESSION['user_id'])) header('Location: index.html');
 
 include ('config.php');
 
