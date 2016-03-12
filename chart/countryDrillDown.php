@@ -16,7 +16,7 @@
 ?>
 <html>
    <head>
-  	<title> Column 2D Chart</title>
+  	<title> Share Chart</title>
   	<link  rel="stylesheet" type="text/css" href="css/style.css" />
 
   	<script src="fusioncharts/fusioncharts.js"></script>
@@ -47,7 +47,7 @@
 
         	/* Form the SQL query that will return the country name based on the country code. The result of the above query contains only the country code. The country name is needed to be rendered as a caption for the chart that shows the 10 most populous cities */
 
-        	$countryNameQuery = "SELECT Name FROM Country WHERE Code = ?";
+        	$countryNameQuery = "SELECT name,price FROM Share";
 
         	// Prepare the query statement
         	$countryPrepStmt = $dbhandle->prepare($countryNameQuery);
@@ -72,7 +72,7 @@
         	// The `$arrData` array holds the chart attributes and data
         	$arrData = array(
                 "chart" => array(
-                    "caption" => "Top 10 Most Populous Cities in ".$countryName,
+                    "caption" => "Shares Price Chart ",
                     "paletteColors" => "#0075c2",
                     "bgColor" => "#ffffff",
                     "borderAlpha"=> "20",

@@ -30,7 +30,7 @@
       if ($result) {
           $arrData = array(
                 "chart" => array(
-                    "caption" => "Top 10 Most Populous Countries",
+                    "caption" => "Shares Price Chart",
                     "paletteColors" => "#0075c2",
                     "bgColor" => "#ffffff",
                     "borderAlpha"=> "20",
