@@ -22,15 +22,15 @@ if (isset($_POST['email'])&&isset($_POST['pass'])&&isset($_POST['rpass'])) {
 
     
 
-    $user = mysqli_query($link,"select * from data where email ='$email'  ;");
+    $user = mysqli_query($link,"select * from data where email ='".$email."';");
     
 if($user) {
     
      $user1 = mysqli_query($link, "   
                    
                   UPDATE data SET 
-                 passwd = '$passwd',
-                WHERE email = '$email'
+                 passwd = '" . $_POST['pass'] . "'
+                WHERE email = '" . $_POST['email'] . "'
            
                   ");
     echo "   UPDATE data SET 

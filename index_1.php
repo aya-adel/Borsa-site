@@ -21,7 +21,7 @@ if (isset($_POST['reg'])&&isset($_POST['reg_name'])&&isset($_POST['reg_email'])&
     $rpasswd=trim($_POST['reg_repass']);
      $passwd=trim($_POST['reg_pass']);
      
-    
+    if($passwd==$rpasswd){
 
 if(preg_match('/^[a-z ]{3,50}$/i', $name)&&preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $email)){
    
@@ -43,6 +43,17 @@ else {
    
 }
      
-
+}
+else {
+     
+   
+    
+      header('Location: index.html');
+      
+   
+      
+      
+      
+}
 }
 ?>

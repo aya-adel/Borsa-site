@@ -10,7 +10,7 @@
 $config=[
     'server'=>'localhost',
     'username'=>'root',
-    'passoword'=>'hggih;fv',
+    'passoword'=>'admin',
     'database'=>'borsa'   
 
 ];

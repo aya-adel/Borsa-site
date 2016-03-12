@@ -3,7 +3,7 @@
   include("fusioncharts.php");
      $hostdb = "localhost";  // MySQl host
    $userdb = "root";  // MySQL username
-   $passdb = "hggih;fv";  // MySQL password
+   $passdb = "admin";  // MySQL password
    $namedb = "borsa";  // MySQL database name
 
    $dbhandle = new mysqli($hostdb, $userdb, $passdb, $namedb);
