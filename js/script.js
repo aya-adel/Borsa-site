@@ -14,7 +14,9 @@ function showUser() {
    
         xhr.onreadystatechange= function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
+
                 document.getElementById("mytable").innerHTML = xhr.responseText;
+
             }
         };
        
@@ -29,6 +31,7 @@ var share = e.options[e.selectedIndex];
         var price =document.getElementById("price");
         xhr.onreadystatechange= function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
+
                 document.getElementById("mytable").innerHTML = xhr.responseText;
 
             }
@@ -80,8 +83,7 @@ xhr.send("a="+check+"&aa="+share+"&aaa="+alert +"&aaaa="+lastprice+ "&aaaaa="+la
     var share = rowCells[1].innerHTML;
    var enablecheck;
 
- 
-      
+
     if(obj.checked){
     enablecheck=1;
       //console.log(enablecheck);
@@ -94,6 +96,7 @@ xhr.send("a="+check+"&aa="+share+"&aaa="+alert +"&aaaa="+lastprice+ "&aaaaa="+la
 xhr.open("POST","alert.php", true);
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhr.send("c="+enablecheck+"&cc="+share);
+
 xhr.onreadystatechange= function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 showUser;
@@ -101,3 +104,5 @@ xhr.onreadystatechange= function() {
             }
         };
 }
+
+

@@ -14,7 +14,11 @@ function showUser() {
    
         xhr.onreadystatechange= function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
+<<<<<<< HEAD
                 document.getElementById("mytable").innerHTML = xhr.responseText;
+=======
+                document.getElementById("txtHint").innerHTML = xhr.responseText;
+>>>>>>> bbaa64c2b83b293f34aca3b3c8819407463be594
             }
         };
        
@@ -29,7 +33,11 @@ var share = e.options[e.selectedIndex];
         var price =document.getElementById("price");
         xhr.onreadystatechange= function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
+<<<<<<< HEAD
                 document.getElementById("mytable").innerHTML = xhr.responseText;
+=======
+                document.getElementById("txtHint").innerHTML = xhr.responseText;
+>>>>>>> bbaa64c2b83b293f34aca3b3c8819407463be594
 
             }
         };
@@ -80,7 +88,11 @@ xhr.send("a="+check+"&aa="+share+"&aaa="+alert +"&aaaa="+lastprice+ "&aaaaa="+la
     var share = rowCells[1].innerHTML;
    var enablecheck;
 
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> bbaa64c2b83b293f34aca3b3c8819407463be594
       
     if(obj.checked){
     enablecheck=1;
@@ -94,6 +106,7 @@ xhr.send("a="+check+"&aa="+share+"&aaa="+alert +"&aaaa="+lastprice+ "&aaaaa="+la
 xhr.open("POST","alert.php", true);
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhr.send("c="+enablecheck+"&cc="+share);
+<<<<<<< HEAD
 xhr.onreadystatechange= function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 showUser;
@@ -101,3 +114,8 @@ xhr.onreadystatechange= function() {
             }
         };
 }
+=======
+
+}
+
+>>>>>>> bbaa64c2b83b293f34aca3b3c8819407463be594
