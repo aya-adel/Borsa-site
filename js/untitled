@@ -1,0 +1,106 @@
+<html>
+<head>
+	<script type="text/javascript" src="jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="functions.js"></script>
+</head>
+<body>
+	<button id="btnAdd">New</button>
+	<table id="tblData">			
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Phone</th>
+				<th>Email</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+</body>
+</html>
+
+
+
+$(function(){
+    
+    
+    //if($('#image').position().top-5>0){
+    //    //
+
+  	//if($('#image').position().top+5<$("body").height()){
+    ////////// function el add bt7ot fe mkan el class 3 text field w btnady 3la 2 function save 2w delete
+    
+   function Add(){
+	$("#tblData tbody").append(
+		"<tr>"+
+		"<td><input type='text'/></td>"+
+		"<td><input type='text'/></td>"+
+		"<td><input type='text'/></td>"+
+		"<td><input type='submit' value='SAVE'  class='btnSave'><input type='submit'value='DELETE'  class='btnDelete'/></td>"+
+		"</tr>");
+	
+		$(".btnSave").on("click", Save);		
+		$(".btnDelete").on("click", Delete);
+}; 
+
+
+//////////// the save function deh btshal text field w htkbt kmto s7
+
+function Save(){
+	var par = $(this).parent().parent(); //tr
+	var tdName = par.children("td:nth-child(1)");
+	var tdPhone = par.children("td:nth-child(2)");
+	var tdEmail = par.children("td:nth-child(3)");
+	var tdButtons = par.children("td:nth-child(4)");
+
+	tdName.html(tdName.children("input[type=text]").val());
+	tdPhone.html(tdPhone.children("input[type=text]").val());
+	tdEmail.html(tdEmail.children("input[type=text]").val());
+	tdButtons.html("<input type='submit' value='DELETE' class='btnDelete'/><input type='submit' value='EDIT' class='btnEdit'/>");
+
+	$(".btnEdit").on("click", Edit);
+	$(".btnDelete").on("click", Delete);
+};
+
+
+//// b7ot kyma zy elly fe javascript
+
+function Edit(){
+	var par = $(this).parent().parent(); //tr
+	var tdName = par.children("td:nth-child(1)");
+	var tdPhone = par.children("td:nth-child(2)");
+	var tdEmail = par.children("td:nth-child(3)");
+	var tdButtons = par.children("td:nth-child(4)");
+
+	tdName.html("<input type='text' id='txtName' value='"+tdName.html()+"'/>");
+	tdPhone.html("<input type='text' id='txtPhone' value='"+tdPhone.html()+"'/>");
+	tdEmail.html("<input type='text' id='txtEmail' value='"+tdEmail.html()+"'/>");
+	tdButtons.html("< input type='submit' value='SAVE' class='btnSave'/>");
+        tdButtons.html("<input type='submit' value='DELETE' class='btnDelete'/><input type='submit' value='SAVE' class='btnSave'/>");
+
+	$(".btnSave").bind("click", Save);
+	
+	$(".btnDelete").bind("click", Delete);
+};
+
+function Delete(){
+	var par = $(this).parent().parent(); //tr
+	par.remove();
+}; 
+
+
+
+
+
+
+
+$("#btnAdd").on("click", Add);
+ 
+    
+    
+    
+    
+    
+  
+});
