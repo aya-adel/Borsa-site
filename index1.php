@@ -18,6 +18,7 @@ if (isset($_POST['login'])&&isset($_POST['login_email'])&&isset($_POST['login_pa
     $email=$_POST['login_email'];
     $passwd=$_POST['login_passwd'];
 
+    
 
     $user = mysqli_query($link,"select * from data where email ='".$email."' and passwd= '".$passwd."' ;");
     $data = mysqli_fetch_assoc($user);
