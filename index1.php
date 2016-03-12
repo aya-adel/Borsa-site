@@ -13,10 +13,12 @@ if (isset($_POST['login'])&&isset($_POST['login_email'])&&isset($_POST['login_pa
         echo " error :unable " . mysqli_connect_error();
     }
     
+
     
    
     $email=$_POST['login_email'];
     $passwd=$_POST['login_passwd'];
+
 
     
 
@@ -33,6 +35,7 @@ if($data!=null) {
         //echo "string";
         $_SESSION['faild_login'] = "Wrong Email or Password";
         header('Location: index.html');
+
     }
 
 }

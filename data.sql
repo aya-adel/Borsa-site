@@ -26,9 +26,15 @@ CREATE TABLE `Share` (
   `id` int(200) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   `price` varchar(200) NOT NULL,
+<<<<<<< HEAD
+  `time` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=404 DEFAULT CHARSET=latin1;
+=======
   `time` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+>>>>>>> f4f855e6990b796a55ce0cddbf30e305ed4914ba
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +43,11 @@ CREATE TABLE `Share` (
 
 LOCK TABLES `Share` WRITE;
 /*!40000 ALTER TABLE `Share` DISABLE KEYS */;
+<<<<<<< HEAD
+INSERT INTO `Share` VALUES (365,'Apple Inc.','103.01','0000-00-00'),(384,'Symantec Corporation','16.62','0000-00-00'),(394,'Microsoft Corporation','52.03','0000-00-00'),(396,'Hewlett Packard Enterprise Comp','15.44','0000-00-00'),(397,'Petroleo Brasileiro S.A.- Petro','5.26','0000-00-00'),(398,'H&R Block, Inc. Common Stock','27.76','0000-00-00'),(399,'Alphabet Inc.','730.22','0000-00-00'),(401,'Seadrill Limited Ordinary Share','5.97','0000-00-00'),(402,'North Atlantic Drilling Ltd. Co','3.34','0000-00-00'),(403,'Whiting Petroleum Corporation C','7.09','0000-00-00');
+=======
 INSERT INTO `Share` VALUES (1,'Apple Inc.','101.87','March 8, 2016, 2:33 pm'),(2,'Symantec Corporation','17.09','March 8, 2016, 2:33 pm'),(3,'Microsoft Corporation','51.03','March 8, 2016, 2:33 pm'),(4,'Hewlett Packard Enterprise Comp','15.97','March 8, 2016, 2:33 pm'),(5,'Petroleo Brasileiro S.A.- Petro','5.22','March 8, 2016, 2:33 pm'),(6,'H&R Block, Inc. Common Stock','28.11','March 8, 2016, 2:33 pm'),(7,'Alphabet Inc.','712.80','March 8, 2016, 2:33 pm'),(8,'Seadrill Limited Ordinary Share','6.06','March 8, 2016, 2:33 pm'),(9,'North Atlantic Drilling Ltd. Co','3.52','March 8, 2016, 2:33 pm'),(10,'Whiting Petroleum Corporation C','8.16','March 8, 2016, 2:33 pm');
+>>>>>>> f4f855e6990b796a55ce0cddbf30e305ed4914ba
 /*!40000 ALTER TABLE `Share` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -67,6 +77,8 @@ LOCK TABLES `data` WRITE;
 UNLOCK TABLES;
 
 --
+<<<<<<< HEAD
+=======
 -- Table structure for table `temp_price`
 --
 
@@ -94,6 +106,7 @@ INSERT INTO `temp_price` VALUES (1,'Apple Inc.',102,'0000-00-00'),(2,'Symantec C
 UNLOCK TABLES;
 
 --
+>>>>>>> f4f855e6990b796a55ce0cddbf30e305ed4914ba
 -- Table structure for table `user_share`
 --
 
@@ -127,4 +140,8 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+<<<<<<< HEAD
+-- Dump completed on 2016-03-06 19:29:13
+=======
 -- Dump completed on 2016-03-08 16:20:09
+>>>>>>> f4f855e6990b796a55ce0cddbf30e305ed4914ba
