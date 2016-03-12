@@ -30,11 +30,12 @@ var share = e.options[e.selectedIndex];
         xhr.onreadystatechange= function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
                 document.getElementById("txtHint").innerHTML = xhr.responseText;
+
             }
         };
        
         
-            xhr.open("POST","alert.php",true);
+    xhr.open("POST","alert.php",true);
     xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
     xhr.send("share="+share.value+"&limit="+limit.value+"&price="+price.value);
      console.log(share.value);
@@ -44,10 +45,7 @@ var share = e.options[e.selectedIndex];
 
 }
 function deleteRow(obj) {
-   var table = document.getElementById("myTableData");
-    var index = obj.parentNode.parentNode.rowIndex;
-    // var rowCount = table.rows.length;
-    //var row = table.insertRow(rowCount);
+   
     var selectedRow = obj.parentNode.parentNode;
     var rowCells = selectedRow.childNodes;
     var check = rowCells[0].innerHTML;
@@ -55,7 +53,14 @@ function deleteRow(obj) {
     var alert = rowCells[2].innerHTML;
     var lastprice  = rowCells[3].innerHTML;
     var lasttrigger = rowCells[4].innerHTML;
-    selectedRow.remove();
+    
+     xhr.onreadystatechange= function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                selectedRow.remove();
+
+            }
+        };
+       
     
      
      

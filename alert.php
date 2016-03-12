@@ -37,7 +37,7 @@ while($row = mysqli_fetch_array($result)) {
     echo  "<td><input type='button' value='delete' onClick='Javacsript:deleteRow(this)'/></td> ";
     echo "</tr>";
 }
-echo "</table>";
+
 $share=$_POST["share"];
 $limit=$_POST["limit"];
 $price=$_POST["price"];
@@ -72,9 +72,8 @@ if($result) {
     echo "</tr>";
 }
 
-
-
 }
+
 $check=$_POST["a"];
 $share=$_POST["aa"];
 $alert=$_POST["aaa"];
@@ -86,7 +85,6 @@ if($share!='')
 	$res = mysqli_query($con,$sharesql);
 	$resarray = mysqli_fetch_array($res);
 	$shareid=$resarray['id'];
-	echo $shareid;
 	$sql= 'DELETE FROM `user_share` WHERE `share_id` = "'.$shareid.'"';
 	$result = $con->query($sql);
 
@@ -102,11 +100,11 @@ if($share!=''&&$enable!='')
 	$res = mysqli_query($con,$sharesql);
 	$resarray = mysqli_fetch_array($res);
 	$shareid=$resarray['id'];
-	echo $shareid;
 	$sql= 'UPDATE `user_share` SET `flag` = "'.$enable.'" WHERE `user_id` = "'.$_SESSION['user_id'].'" AND `share_id` ="'.$shareid.'";';
 	$result = $con->query($sql);
 
 
 
 }
+echo "</table>";
 mysqli_close($con);
