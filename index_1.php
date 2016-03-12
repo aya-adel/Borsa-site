@@ -29,7 +29,7 @@ if(preg_match('/^[a-z ]{3,50}$/i', $name)&&preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a
         //echo $_SESSION['user_id'];
         header('Location: index3.html');
     }
-    
+        
 }
 else {
     $_SESSION['faild_login'] = "Wrong Email or Password";

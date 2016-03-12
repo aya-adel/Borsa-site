@@ -97,7 +97,7 @@ $enable=$_POST["c"];
 $share=$_POST["cc"];
 
 if($share!=''&&$enable!='')
-{
+{   
 	$sharesql='SELECT id,price FROM `Share` where name="'.$share.'"';
 	$res = mysqli_query($con,$sharesql);
 	$resarray = mysqli_fetch_array($res);
