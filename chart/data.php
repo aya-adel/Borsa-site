@@ -54,7 +54,7 @@
             array_push($arrData["data"], array(
                 "label" => $row["Name"],
                 "value" => $row["price"],
-                "link" => "countryDrillDown.php"
+                "link" => "ShareChart.php"
                 )
             );
           }
