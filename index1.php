@@ -26,11 +26,9 @@ if($data!=null) {
     //echo $data["username"];
         $_SESSION['user_id'] = $data["id"];
         //echo $_SESSION['user_id'];
-<<<<<<< HEAD
+
         header('Location: blog.html');
-=======
-        header('Location: alert.html');
->>>>>>> bbaa64c2b83b293f34aca3b3c8819407463be594
+
     } else {
         //echo "string";
         $_SESSION['faild_login'] = "Wrong Email or Password";
