@@ -22,8 +22,15 @@ if (isset($_POST['reg'])&&isset($_POST['reg_name'])&&isset($_POST['reg_email'])&
 
 
     $user = mysqli_query($link, "insert into data (name,email,passwd) values( '" .  $name . "' , '" . $email. "' ,'" . $passwd . "')");
-    if ($user) {
-        echo "l2ha ";
+    if($data!=null) {
+    //echo $data["username"];
+        $_SESSION['user_id'] = $data["id"];
+        //echo $_SESSION['user_id'];
+        header('Location: index3.html');
+    } else {
+        //echo "string";
+        $_SESSION['faild_login'] = "Wrong Email or Password";
+        header('Location: index.html');
     }
 
 }
