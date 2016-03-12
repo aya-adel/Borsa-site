@@ -29,7 +29,7 @@ while($row = mysqli_fetch_array($result)) {
 	if($row['flag']==1){$check='checked';}
 	else {$check="";}
     echo "<tr>";
-    echo "<td><input type='checkbox' id='enable' name='enable' value='enable'".$check." onClick='Javacsript:checkenable(this)'/></td>";
+    echo "<td><input type='checkbox' id='enable' name='enable'".$check." onchange='Javacsript:checkenable(this)'/></td>";
     echo "<td>" . $row['name'] . "</td>";
     echo "<td>" . $row['price'] . "</td>";
     echo "<td>" . $select.$row['wPrice'] . "</td>";
@@ -63,7 +63,7 @@ if($result) {
 	$check='checked';
 	
     echo "<tr>";
-    echo "<td><input type='checkbox' id='enable' name='enable' value='enable' checked onClick='Javacsript:checkenable(this)'/></td>";
+    echo "<td><input type='checkbox' id='enable' name='enable' checked onchange='Javacsript:checkenable(this)'/></td>";
     echo "<td>" . $share . "</td>";
     echo "<td>" . $shareprice . "</td>";
     echo "<td>" . $select.$price . "</td>";
