@@ -18,6 +18,8 @@ if (isset($_POST['email'])&&isset($_POST['pass'])&&isset($_POST['rpass'])) {
     $email=$_POST['email'];
     $passwd=$_POST['pass'];
     $rpasswd=$_POST['rpass'];
+   // echo $passwd;
+   // echo $rpasswd;
     
 
     
@@ -26,6 +28,9 @@ if (isset($_POST['email'])&&isset($_POST['pass'])&&isset($_POST['rpass'])) {
     
 if($user) {
     
+    if($passwd == $rpasswd)
+        
+    {
      $user1 = mysqli_query($link, "   
                    
                   UPDATE data SET 
@@ -33,11 +38,17 @@ if($user) {
                 WHERE email = '" . $_POST['email'] . "'
            
                   ");
-    echo "   UPDATE data SET 
-                 passwd = " . $_POST['pass'] . ",
-                WHERE email = '" . $_POST['email'] . "'";
+   // echo "   UPDATE data SET 
+     //            passwd = " . $_POST['pass'] . ",
+       //         WHERE email = '" . $_POST['email'] . "'";
     
     }
-
+    
+    else
+    {
+    
+        echo "no matched password";
+    }
+    }
 }
 ?>
