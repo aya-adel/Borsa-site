@@ -39,7 +39,7 @@ while($row = mysqli_fetch_array($result)) {
     echo "<td>" . $row['name'] . "</td>";
     echo "<td>" . $row['price'] . "</td>";
     echo "<td>" . $select.$row['wPrice'] . "</td>";
-    echo "<td>" . "trigerred" . "</td>";
+    echo "<td>" . $row['lastcheck']. "</td>";
     echo  "<td><input type='button' value='delete' onClick='Javacsript:deleteRow(this)'/></td> ";
     echo "</tr>";
 }
@@ -77,7 +77,7 @@ if($result) {
     echo "<td>" . $share . "</td>";
     echo "<td>" . $shareprice . "</td>";
     echo "<td>" . $select.$price . "</td>";
-    echo "<td>" . "trigerred" . "</td>";
+    echo "<td>" . "0000-00-00" . "</td>";
     echo  "<td><input type='button' value='delete' onClick='Javacsript:deleteRow(this)'/></td> ";
     echo "</tr>";
 }
